@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.blogku.R;
 import com.example.blogku.model.PostList;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import java.util.List;
 
