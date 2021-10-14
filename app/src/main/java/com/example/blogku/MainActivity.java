@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent moveLogin = new Intent(MainActivity.this, PencarianActivity.class);
                 startActivity(moveLogin);
                 break;
+            default:
+                break;
         }
     }
 }
