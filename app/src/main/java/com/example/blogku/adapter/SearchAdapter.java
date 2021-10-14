@@ -15,14 +15,14 @@ import com.example.blogku.model.PostList;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class SearchAdapter extends FirebaseRecyclerAdapter<PostList, SearchAdapter.myViewHolder> {
+public class SearchAdapter extends FirebaseRecyclerAdapter<PostList, SearchAdapter.MyViewHolder> {
 
     public SearchAdapter(@NonNull FirebaseRecyclerOptions<PostList> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull PostList postList) {
+    protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull PostList postList) {
         holder.judul.setText(postList.getJudul());
         holder.isi_post.setText(postList.getIsiPost());
         Glide.with(holder.file_gambar.getContext()).load(postList.getFileGambar()).into(holder.file_gambar);
@@ -30,17 +30,17 @@ public class SearchAdapter extends FirebaseRecyclerAdapter<PostList, SearchAdapt
 
     @NonNull
     @Override
-    public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post, parent, false);
-        return new myViewHolder(view);
+        return new MyViewHolder(view);
     }
 
-    class myViewHolder extends RecyclerView.ViewHolder {
+    class MyViewHolder extends RecyclerView.ViewHolder {
         TextView judul;
         TextView isi_post;
         ImageView file_gambar;
 
-        public myViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             judul = (TextView) itemView.findViewById(R.id.tv_judul);
