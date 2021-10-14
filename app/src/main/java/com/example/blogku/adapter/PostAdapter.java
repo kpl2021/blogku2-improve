@@ -18,7 +18,7 @@ import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     // List untuk menampung semua data postingan dari firebase
-    private com.example.blogku.adapter.PostAdapter.OnItemClickListener mListener;
+    private OnItemClickListener mListener;
 
     List<PostList> postLists;
     Context ct;
@@ -32,7 +32,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post, parent, false);
-        com.example.blogku.adapter.PostAdapter.ViewHolder viewHolder = new com.example.blogku.adapter.PostAdapter.ViewHolder(view, mListener);
+        ViewHolder viewHolder = new com.example.blogku.adapter.PostAdapter.ViewHolder(view, mListener);
         return viewHolder;
     }
 
@@ -57,7 +57,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         TextView isi_post;
         ImageView file_gambar;
 
-        public ViewHolder(@NonNull View itemView, final com.example.blogku.adapter.PostAdapter.OnItemClickListener listener) {
+        public ViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             judul = itemView.findViewById(R.id.tv_judul);
             file_gambar = itemView.findViewById(R.id.tv_file_gambar);
@@ -82,7 +82,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         void onItemClick(int position);
     }
 
-    public void setOnItemClickListener(com.example.blogku.adapter.PostAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 }
