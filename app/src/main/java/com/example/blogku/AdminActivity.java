@@ -41,6 +41,8 @@ public class AdminActivity extends AppCompatActivity {
             case R.id.admin_rekap_post :
                 startActivity(new Intent(AdminActivity.this, AdminRekapPostActivity.class));
                 break;
+            default:
+                break;
         }
     }
 }
