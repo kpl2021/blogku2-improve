@@ -54,7 +54,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView judul, isi_post;
+        TextView judul;
+        TextView isi_post;
         ImageView file_gambar;
 
         public ViewHolder(@NonNull View itemView, final com.example.blogku.adapter.PostAdapter.OnItemClickListener listener) {

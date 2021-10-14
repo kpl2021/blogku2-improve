@@ -36,7 +36,8 @@ public class SearchAdapter extends FirebaseRecyclerAdapter<PostList, SearchAdapt
     }
 
     class myviewholder extends RecyclerView.ViewHolder {
-        TextView judul, isi_post;
+        TextView judul;
+        TextView isi_post;
         ImageView file_gambar;
 
         public myviewholder(@NonNull View itemView) {
